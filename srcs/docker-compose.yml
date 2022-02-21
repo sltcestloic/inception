@@ -1,0 +1,12 @@
+services:
+  nginx:
+    ports:
+      - "443:443"
+    networks:
+      - inception-network
+  wordpress:
+
+  db:
+
+networks:
+  inception-network:
