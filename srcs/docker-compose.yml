@@ -2,11 +2,11 @@ services:
   nginx:
     ports:
       - "443:443"
-    networks:
-      - inception-network
+    image: nginx
+    build: requirements/nginx
   wordpress:
-
-  db:
-
-networks:
-  inception-network:
+    image: wordpress
+    build: requirements/wordpress
+  mariadb:
+    image: mariadb
+    build: requirements/mariadb
