@@ -4,10 +4,20 @@ services:
       - "443:443"
       - "80:80"
     image: nginx
+    container_name: nginx
     build: requirements/nginx
+    volumes:
+      - "wp-volume:/var/www/html/"
   wordpress:
     image: wordpress
+    container_name: wordpress
     build: requirements/wordpress
   mariadb:
     image: mariadb
+    container_name: mariadb
     build: requirements/mariadb
+
+
+
+volumes:
+  wp-volume:
