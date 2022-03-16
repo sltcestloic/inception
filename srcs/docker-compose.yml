@@ -21,3 +21,6 @@ services:
 
 volumes:
   wp-volume:
+    driver: local
+    driver_opts:
+      o: bind
