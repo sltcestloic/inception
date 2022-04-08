@@ -28,5 +28,6 @@ volumes:
   wp-volume:
     driver: local
     driver_opts:
+      type: none
       o: bind
-      device: /Users/lbertran/Desktop/work/inception/volumes
+      device: /Users/lolo/work/inception/volumes

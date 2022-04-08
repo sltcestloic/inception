@@ -1,6 +1,6 @@
 FROM debian:buster
 
-RUN apt-get update && apt-get upgrade && apt-get install -y wget php-fpm php-mysql
+RUN apt-get update && apt-get upgrade -y && apt-get install -y wget php-fpm php-mysql
 
 RUN wget https://wordpress.org/latest.tar.gz \
 	&& mkdir -p /var/www/html/wordpress \
