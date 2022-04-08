@@ -2,8 +2,8 @@ server {
 	listen 80;
 	listen 443 ssl;
 
-    root /var/www/html;
-    index index.nginx-debian.html index.php;
+    root /var/www/html/wordpress;
+    index index.html index.php;
 
     server_name 127.0.0.1 localhost;
 
@@ -20,7 +20,11 @@ server {
     }
 
     location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+        #include snippets/fastcgi-php.conf;
+        fastcgi_pass wordpress:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
     }
 }
