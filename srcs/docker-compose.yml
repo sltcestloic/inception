@@ -21,7 +21,6 @@ services:
 
   mariadb:
     ports:
-      - "3306:3306"
     image: mariadb
     container_name: mariadb
     build:

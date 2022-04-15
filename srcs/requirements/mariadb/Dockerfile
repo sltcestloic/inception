@@ -3,6 +3,8 @@ FROM debian:buster
 RUN apt-get update && apt-get upgrade -y \
 	&& apt-get install -y mariadb-server mariadb-client
 
+EXPOSE 3306
+
 ARG DB_NAME
 ARG DB_USER
 ARG DB_PASS
