@@ -16,19 +16,8 @@ services:
     image: wordpress
     container_name: wordpress
     build: requirements/wordpress
-    environment:
-      - WP_ADMIN=${WP_ADMIN}
-      - WP_APASS=${WP_APASS}
-      - WP_AMAIL=${WP_AMAIL}
-      - WP_USER=${WP_USER}
-      - WP_PASS=${WP_PASS}
-      - WP_MAIL=${WP_MAIL}
-      - WP_TITLE=${WP_TITLE}
-      - WP_URL=${WP_URL}
-      - DB_NAME=${DB_NAME}
-      - DB_USER=${DB_USER}
-      - DB_PASS=${DB_PASS}
-      - DB_HOST=${DB_HOST}
+    env_file:
+      - .env
     volumes:
       - "wp-volume:/var/www/html/"
     restart: always
