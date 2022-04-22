@@ -30,7 +30,7 @@ define( 'DB_USER', 'user' );
 define( 'DB_PASSWORD', 'password' );
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'mariadb:3306' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -49,15 +49,15 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',          '@!-mgu^Lu%NK(op{tCbr+H;^ ;=xZZS@lys7k>M-> jvgiXR)L=&K#~5}TS&gjiz' );
-define( 'SECURE_AUTH_KEY',   'y39lCu7ir*.$K4#(5~G?[i40N$k4^`S-[qJX(ZewKcQ2/tlBIL[cBARbg4A>NStm' );
-define( 'LOGGED_IN_KEY',     'n4%Zs;djkg=3n8!f*1#j]yuZI;SJ.}g-S@%>q*&]X6PjK9z]fl~V mi$OL7vh1}l' );
-define( 'NONCE_KEY',         'x$b47 [sms~a$!QV9=JXQ)ZO.q*WX/rQjfA}>B7;xFUGqBv8)0s$!pMvSqkR6E%2' );
-define( 'AUTH_SALT',         'iaK O%ijtGn$p(D;Vko8Gf1aVe~o U@l[#*}nD}PX0[6~f>7QZN=~n(y!;q{-Q7O' );
-define( 'SECURE_AUTH_SALT',  '=8>j+&%a6bCExkz}~!DGj`G;;rRd*`3D5fV`U,R%2/LDD4V-[ ZjXATX{s94F$N6' );
-define( 'LOGGED_IN_SALT',    'eH_2*-E(]hxaI+D>ld-!%nhMO;5I}_jc,9!%q%{Ep*!3.qpRVye~Y<4>T~S<6%,Q' );
-define( 'NONCE_SALT',        '{WY|yUqDUR7gg&QuYWibJ?mc~C9ae(oFx91ZE{asVI7m}KU4E.C%K?uk0q@rYR>f' );
-define( 'WP_CACHE_KEY_SALT', '<@Gi1#jDK?<>Q|7uSe/]5(QNJ.@bnKX|vAir{y0CAzV^wb{)*qPwO5vE^L<qmeut' );
+define( 'AUTH_KEY',          'SEu{LVkJ{bv2%l4&LO.;IHOK2hduDt7}m6seP>1Ios7,vWZ~t[&QT;X,CjO*HTq@' );
+define( 'SECURE_AUTH_KEY',   'KSMD;TjPw,BFYQ{O1xBRkgFJmiXf>+,eaWqvj?cxMeqgtOv,4XrjP2^@D6?qBdZ{' );
+define( 'LOGGED_IN_KEY',     'Oh2Ic` @Nh+f53IPde_R#(tPZ/tqA9]6?_lel*Y.1fZdo/?lgot8GXJko`x_x:+?' );
+define( 'NONCE_KEY',         'IA}MR[wRv{ei&ijf~htE?0o)d!F*6(1cbI 1Q39%TXJag{z,*RO;{a)^-9KM]5C$' );
+define( 'AUTH_SALT',         'aAX--gTrihR@>`QHpL-*!/wadTK x8m-W<P:@&?;$z[e824r|/iYl7QTU9-.) wl' );
+define( 'SECURE_AUTH_SALT',  'a]#/gvyw8KuW~1bN!_mgT!q<}DeGZITNQG}`mH?C5k0(Ol>}<:+m,IhsEq%,Rk-~' );
+define( 'LOGGED_IN_SALT',    'rczBJ7)[KiLFGqSDBZ16F!,-UBKtz${55SG@?3,caa`iG/uNl%I< .+of5T`%Gmr' );
+define( 'NONCE_SALT',        '$%)U SQRB,~dl?y9.Ie.2pW/A{rNmvUfj2@Jko%nDENT[c]z6JSFI8y)IEv^~fDa' );
+define( 'WP_CACHE_KEY_SALT', 'E8@.zCZzPm>+6%#>a;Rt !C791%,I)* d#9I&oc|>V8BTE@nggb%i5Gd(IEj#(f.' );
 
 
 /**#@-*/
