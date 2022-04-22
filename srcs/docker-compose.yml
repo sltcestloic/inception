@@ -6,6 +6,8 @@ services:
     image: nginx
     container_name: nginx
     build: requirements/nginx
+    networks:
+      - inception_network
     volumes:
       - "wp-volume:/var/www/html/"
     restart: always
@@ -18,6 +20,8 @@ services:
     build: requirements/wordpress
     env_file:
       - .env
+    networks:
+      - inception_network
     volumes:
       - "wp-volume:/var/www/html/"
     restart: always
@@ -27,6 +31,8 @@ services:
   mariadb:
     image: mariadb
     container_name: mariadb
+    networks:
+      - inception_network
     build:
       context: requirements/mariadb
       args:
@@ -46,3 +52,9 @@ volumes:
       type: none
       o: bind
       device: /Users/lolo/work/inception/volumes
+
+
+networks:
+  inception_network:
+    name: inception_network
+    driver: bridge
