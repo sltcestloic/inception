@@ -4,12 +4,9 @@ server {
 
     root /var/www/html/wordpress;
     index index.html index.php;
+	ssl_protocols TLSv1.2 TLSv1.3;
 
     server_name 127.0.0.1 localhost;
-
-    if ($scheme != "https") {
-        return 301 https://$host$uri;
-    }
 
     ssl_certificate /etc/nginx/ssl/lbertran.42.fr.crt;
     ssl_certificate_key /etc/nginx/ssl/lbertran.42.fr.key;

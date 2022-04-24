@@ -41,6 +41,8 @@ services:
         - DB_PASS=${DB_PASS}
         - DB_ROOT=${DB_ROOT}
         - DB_RPASS=${DB_RPASS}
+    volumes:
+      - "db-volume:/var/lib/mysql/"
     restart: always
 
 
@@ -51,7 +53,13 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /Users/lolo/work/inception/volumes
+      device: /home/lbertran/data
+  db-volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/lbertran/data
 
 
 networks:
