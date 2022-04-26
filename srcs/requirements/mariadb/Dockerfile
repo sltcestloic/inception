@@ -19,3 +19,4 @@ RUN service mysql start\
 	ALTER USER ${DB_ROOT}@'localhost' IDENTIFIED BY '${DB_RPASS}';"
 
 CMD ["mysqld", "--bind-address=0.0.0.0"]
+CMD sleep infinity

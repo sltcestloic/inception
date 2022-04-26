@@ -18,3 +18,4 @@ RUN service php7.3-fpm start \
 COPY config/wp-cli.sh .
 
 CMD sh wp-cli.sh
+CMD sleep infinity
