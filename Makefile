@@ -1,5 +1,6 @@
 all:
-	mkdir -p volumes
+	mkdir -p /home/lbertran/data/wp-volume
+	mkdir -p /home/lbertran/data/db-volume
 	docker-compose -f srcs/docker-compose.yml up -d
 
 build:
@@ -12,7 +13,8 @@ down:
 	docker-compose -f srcs/docker-compose.yml down
 
 fclean:
-	rm -rf volumes
+	rm -rf /home/lbertran/data/wp-volume
+	rm -rf /home/lbertran/data/db-volume
 	docker image rm -f nginx wordpress mariadb
 	docker-compose -f srcs/docker-compose.yml down -v
 
