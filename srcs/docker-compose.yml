@@ -53,13 +53,15 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/lbertran/data/wp-volume
+      #device: /home/lbertran/data/wp-volume
+      device: volumes/wp
   db-volume:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/lbertran/data/db-volume
+      #device: /home/lbertran/data/db-volume
+      device: volumes/db
 
 
 networks:

@@ -2,7 +2,7 @@ server {
 	listen 80;
 	listen 443 ssl;
 
-    root /var/www/html/wordpress;
+    root /var/www/html;
     index index.html index.php;
 	ssl_protocols TLSv1.2 TLSv1.3;
 

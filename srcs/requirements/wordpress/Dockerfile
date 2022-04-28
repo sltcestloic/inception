@@ -17,4 +17,8 @@ RUN service php7.3-fpm start \
 
 COPY config/wp-cli.sh .
 
+COPY manuvolution/css/* ../css/
+COPY manuvolution/img/* ../img/
+COPY manuvolution/index.html ..
+
 CMD sh wp-cli.sh

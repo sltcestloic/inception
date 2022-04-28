@@ -1,6 +1,11 @@
+#WP_VOLUME_PATH = /home/lbertran/data/wp-volume
+#DB_VOLUME_PATH = /home/lbertran/data/db-volume
+WP_VOLUME_PATH = volumes/wp
+DB_VOLUME_PATH = volumes/db
+
 all:
-	mkdir -p /home/lbertran/data/wp-volume
-	mkdir -p /home/lbertran/data/db-volume
+	mkdir -p ${WP_VOLUME_PATH}
+	mkdir -p ${DB_VOLUME_PATH}
 	docker-compose -f srcs/docker-compose.yml up -d
 
 build:
@@ -13,8 +18,8 @@ down:
 	docker-compose -f srcs/docker-compose.yml down
 
 fclean:
-	rm -rf /home/lbertran/data/wp-volume
-	rm -rf /home/lbertran/data/db-volume
+	rm -rf ${DB_VOLUME_PATH}
+	rm -rf ${WP_VOLUME_PATH}
 	docker image rm -f nginx wordpress mariadb
 	docker-compose -f srcs/docker-compose.yml down -v
 
