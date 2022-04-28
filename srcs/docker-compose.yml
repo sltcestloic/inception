@@ -45,7 +45,21 @@ services:
       - "db-volume:/var/lib/mysql/"
     restart: always
 
-
+  ftp:
+    ports:
+      - "21:21"
+    image: ftp
+    container_name: ftp
+    build: requirements/ftp
+    env_file:
+      - .env
+    networks:
+      - inception_network
+    volumes:
+      - "wp-volume:/var/www/html/"
+    restart: always
+    depends_on:
+      - wordpress
 
 volumes:
   wp-volume:

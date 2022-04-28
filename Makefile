@@ -20,7 +20,7 @@ down:
 fclean:
 	rm -rf ${DB_VOLUME_PATH}
 	rm -rf ${WP_VOLUME_PATH}
-	docker image rm -f nginx wordpress mariadb
+	docker image rm -f nginx wordpress mariadb ftp
 	docker-compose -f srcs/docker-compose.yml down -v
 
 re: fclean all
