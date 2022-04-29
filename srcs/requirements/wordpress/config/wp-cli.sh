@@ -18,5 +18,8 @@ wp core install --title=$WP_TITLE \
 wp user create $WP_USER $WP_MAIL \
                 --user_pass=$WP_PASS \
                 --allow-root
+
+echo "define('WP_SITEURL', 'https://' . $_SERVER['SERVER_NAME'] . '/wordpress');" >> wp_config.php
+echo "define('WP_HOME', 'https://' . $_SERVER['SERVER_NAME'] . '/wordpress');" >> wp_config.php
 fi
 php-fpm7.3 -F -R
