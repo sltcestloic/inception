@@ -45,21 +45,17 @@ services:
       - "db-volume:/var/lib/mysql/"
     restart: always
 
-  ftp:
+  adminer:
+    image: adminer
+    container_name: adminer
     ports:
-      - "21:21"
-    image: ftp
-    container_name: ftp
-    build: requirements/ftp
-    env_file:
-      - .env
+      - 888:888
     networks:
       - inception_network
-    volumes:
-      - "wp-volume:/var/www/html/"
+    build: requirements/adminer
     restart: always
     depends_on:
-      - wordpress
+      - mariadb
 
 volumes:
   wp-volume:
@@ -67,15 +63,13 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      #device: /home/lbertran/data/wp-volume
-      device: volumes/wp
+      device: /home/lbertran/data/wp-volume
   db-volume:
     driver: local
     driver_opts:
       type: none
       o: bind
-      #device: /home/lbertran/data/db-volume
-      device: volumes/db
+      device: /home/lbertran/data/db-volume
 
 
 networks:
